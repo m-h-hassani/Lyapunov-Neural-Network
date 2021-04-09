@@ -10,7 +10,7 @@ for k=1:length(t)
     x(k,1)=1;
     
 end
-B=0.005; % this is network training rate
+
 %% neural network initialization
 N=4; % number of hidden neuron
 dim=4;
@@ -38,12 +38,12 @@ Wij_i_e =0.05*rand(N,dim);  %input to hidden weights
 W1j_i_e =0.05*rand(1,N);   %hidden to output weights
 W1j_i_e_new(:,:,2) = zeros(1,N);
 Wij_i_e_new(:,:,2) = zeros(4,N);
-B_p_c = 0.25;
-B_p_e = 0.75;
-B_i_c = 0.00005;
-B_i_e = 0.8;
-B_d_c = 0.025;
-B_d_e = 0.8;
+B_p_c = 0.25;  %network training rate
+B_p_e = 0.75;  %network training rate
+B_i_c = 0.00005;  %network training rate
+B_i_e = 0.8;  %network training rate
+B_d_c = 0.025;  %network training rate
+B_d_e = 0.8;  %network training rate
 x_p_c  = x;
 x_p_e = x;
 x_i_c  = x;
@@ -52,27 +52,6 @@ x_d_c  = x;
 x_d_e = x;
 %% neural network 
 %initializing inputs 
-% x(1)=0.5;
-% x(2)=0.5;
-% x(3)=0.5;
-% u(3) = 0;
-% u(2) = 0;
-% y(1)= 0;
-% y(2) = 0;
-% y(3) = 0;
-% u_p_c (3) = 0;
-% u_i_c (3) = 0;
-% for i = 1:3
-%     x(i) = 0.5;
-%     u(i) = 0;
-%     y(i) = 0;
-%     e(i) = 0;
-%     u_p_c (i) = 0;
-%     u_i_c (i) = 0;
-%     u_d_c (i) = 0;
-% end
-% sum = 0;
-% err_d_c(3) = 0;
 y(1,1)=0;
 y(2,1)=0;
 y(3,1)=0;
