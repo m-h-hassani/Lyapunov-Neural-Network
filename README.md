@@ -6,7 +6,7 @@ This system is based on the following paper:
 
 lypid.m is a control system based on the Lyapunov theory. There are 3 controlling blocks that each one is responsible for one of the PID parameters, Kp, Ki, and Kd.
 - Activation function is tanh(.).
-- Neural Network weights are initialized randomly.
+- Neural Network weights are initialized with Xavier initialization method.
 - Instead of using d(k) = Ue(k) like the mentioned paper, I used d(k) = Ue(k-1) for NNE networks.
 
 
